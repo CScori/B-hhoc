@@ -1,0 +1,47 @@
+{
+		"name": "B-hhoc",
+		"version": "1.0.0",
+		"description": "",
+		"main": "index.js",
+		"scripts": {
+				"start": "node index.js",
+				"server": "nodemon index.js",
+				"migrate": "knex migrate:latest",
+				"unmigrate": "knex migrate:rollback",
+				"seed": "knex seed:run ",
+				"front-end": "npm run start --prefix front-end",
+				"test": "echo \"Error: no test specified\" && exit 1",
+				"dev": "concurrently \"npm run server\" \"npm run front-end\"",
+				"heroku-postbuild": "cd front-end && npm install && npm run build"
+		},
+		"dependencies": {
+				"axios": "^0.19.2",
+				"babel-jest": "^24.9.0",
+				"bcryptjs": "^2.4.3",
+				"body-parser": "^1.19.0",
+				"concurrently": "^5.1.0",
+				"cors": "^2.8.5",
+				"cross-env": "^7.0.0",
+				"dotenv": "^8.2.0",
+				"express": "^4.17.1",
+				"helmet": "^3.21.3",
+				"jest": "^24.9.0",
+				"jsonwebtoken": "^8.5.1",
+				"knex": "^0.20.10",
+				"knex-cleaner": "^1.3.0",
+				"nodemon": "^2.0.2",
+				"sqlite3": "^4.2.0"
+		},
+		"devDependencies": {},
+		"repository": {
+				"type": "git",
+				"url": "git+https://github.com/CScori/B-hhoc.git"
+		},
+		"keywords": [],
+		"author": "Cori Nicole",
+		"license": "ISC",
+		"bugs": {
+				"url": "https://github.com/CScori/B-hhoc/issues"
+		},
+		"homepage": "https://github.com/CScori/B-hhoc#readme"
+}
